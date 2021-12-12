@@ -7,12 +7,34 @@ coder: examen
 Escriu aquí el post de la funcionalitat descrita a l'enunciat.
 No canviïs el nom del fitxer ni el títol del post.
 
-## Que afegeixes?
+Posar l’emoji patata 🥔 als llistats d’entitats on hi ha vaixells amb capacitat d’enmagatzemar patates
 
-Què necessites per començar? Quina acció fas? Quin resultat trobes?
+## Posar l’emoji patata 🥔
+### Inicialitzar jugador
 
- * Given that "leonard" is playing.
  * Go to the next player "leonard"
  <!-- SNAPSHOT status=200 -->
- * Go to the "leonard" "city" "Capital".
 
+### Donar materials
+
+ * Given that the "leonard" "city" "Capital" has resource "wood" count 4.
+ * Given that the "leonard" "city" "Capital" has resource "potato" count 5.
+
+### Als llistats d’entitats on hi ha vaixells amb capacitat d’enmagatzemar patates
+
+ * There should be no "potato" emoji.
+ * Go to the "leonard" "ship" "Beagle"
+ * The resource "potato" maximum should be 0.
+ * Go to the contained "deck" "Builder".
+ * Build the "Potato store".
+ <!-- SNAPSHOT status=200 -->
+
+### Comprovar que ha funcionat
+
+ * There should contain the "deck" "Potato store".
+ * The resource "wood" count should be 0.
+ * The resource "potato" maximum should be 5.
+ * Go to the Welcome screen
+ * Go to the next player "leonard"
+ <!-- SNAPSHOT status=200 -->
+ * There should be "potato" emoji.

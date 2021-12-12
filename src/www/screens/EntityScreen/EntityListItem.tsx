@@ -9,7 +9,13 @@ export function EntityListItem({ entity }: any) {
     [dispatch, entity]
   );
 
-  const { type, name, owner } = entity;
+  const { type, name, owner, resources } = entity;
+  let potatoIcon = "";
+  if (resources?.potato.maximum > 0 && type===("ship")) {
+    potatoIcon = "\ud83e\udd54";
+  } else {
+    potatoIcon = "";
+  }
 
   return (
     <li
@@ -19,6 +25,7 @@ export function EntityListItem({ entity }: any) {
     >
       {type}: {name}
       {owner && ` of ${owner}`}
+      {potatoIcon}
     </li>
   );
 }

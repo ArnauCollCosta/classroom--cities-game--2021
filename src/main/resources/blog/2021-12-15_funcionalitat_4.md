@@ -7,7 +7,7 @@ coder: examen
 Escriu aquí el post de la funcionalitat descrita a l'enunciat.
 No canviïs el nom del fitxer ni el títol del post.
 
-## Upgradejar el Wood depot del vaixell
+## Upgradejar el Wood depot de City
 ###Si el test comença de 0 asssegurar que existeix
 
  * Go to the next player "leonard"

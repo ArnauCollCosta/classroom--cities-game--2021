@@ -22,19 +22,16 @@ export const entityTestSteps: PostLineStep[] = [
     screen.getByRole("link", { name: "« Back" }).click();
   }),
   step(
-    /There should be "([^_]+)" emoji/,
-    () => {
-      var entityListItem = screen.getAllByTestId("entity-list-item");
-      var text = entityListItem[1].textContent
-      expect(text).toContain("\ud83e\udd54");
-    }
-  ),
-  step(
-    /There should be no "([^_]+)" emoji/,
-    () => {
-      var entityListItem = screen.getAllByTestId("entity-list-item");
-      var text = entityListItem[1].textContent
-      expect(text).not.toContain("\ud83e\udd54");
+    /The "([^"]+)" emoji is (not )?in the "([^"]+)" "([^"]+)" "([^"]+)"/,
+    (line, [, type, present, player, entity, name]) => {
+      const allItems = getAllEntitiesListItems();
+      const title = `${entity}: ${name} of ${player}${ present ? "" : "\ud83e\udd54" }`;
+      const object = allItems.find((item) => item.textContent?.includes(title));
+      expect(object?.textContent).toBe(title);
     }
   ),
 ];
+
+function getAllEntitiesListItems(): HTMLElement[] {
+  return screen.queryAllByRole("listitem");
+}

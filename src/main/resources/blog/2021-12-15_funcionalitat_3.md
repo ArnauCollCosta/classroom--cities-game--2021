@@ -22,7 +22,8 @@ Posar l’emoji patata 🥔 als llistats d’entitats on hi ha vaixells amb capa
 
 ### Als llistats d’entitats on hi ha vaixells amb capacitat d’enmagatzemar patates
 
- * There should be no "potato" emoji.
+ * The "potato" emoji is not in the "leonard" "city" "Capital".
+ * The "potato" emoji is not in the "leonard" "ship" "Beagle".
  * Go to the "leonard" "ship" "Beagle"
  * The resource "potato" maximum should be 0.
  * Go to the contained "deck" "Builder".
@@ -37,4 +38,5 @@ Posar l’emoji patata 🥔 als llistats d’entitats on hi ha vaixells amb capa
  * Go to the Welcome screen
  * Go to the next player "leonard"
  <!-- SNAPSHOT status=200 -->
- * There should be "potato" emoji.
+ * The "potato" emoji is not in the "leonard" "city" "Capital".
+ * The "potato" emoji is in the "leonard" "ship" "Beagle".

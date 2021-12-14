@@ -18,7 +18,6 @@ Posar l’emoji patata 🥔 als llistats d’entitats on hi ha vaixells amb capa
 ### Donar materials
 
  * Given that the "leonard" "city" "Capital" has resource "wood" count 4.
- * Given that the "leonard" "city" "Capital" has resource "potato" count 5.
 
 ### Als llistats d’entitats on hi ha vaixells amb capacitat d’enmagatzemar patates
 
@@ -35,8 +34,7 @@ Posar l’emoji patata 🥔 als llistats d’entitats on hi ha vaixells amb capa
  * There should contain the "deck" "Potato store".
  * The resource "wood" count should be 0.
  * The resource "potato" maximum should be 5.
- * Go to the Welcome screen
- * Go to the next player "leonard"
- <!-- SNAPSHOT status=200 -->
+ * End the round.
+ <!-- SNAPSHOT status=200 -->  
  * The "potato" emoji is not in the "leonard" "city" "Capital".
  * The "potato" emoji is in the "leonard" "ship" "Beagle".
